@@ -7,3 +7,6 @@ class Member(models.Model):
     password = models.CharField( max_length=50)
     age = models.IntegerField()
     email = models.EmailField( max_length=254)
+    
+    def __str__(self):
+        return self.fname + " " + self.lname
