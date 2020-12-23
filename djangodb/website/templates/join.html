@@ -1,3 +1,51 @@
 {% extends 'base.html' %} {% block content %}
 <h1>Join Today 😄</h1>
+<br />
+<br />
+
+<form method="POST" action="{% url 'join' %}">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">First Name</label>
+    <input
+      type="email"
+      class="form-control"
+      aria-describedby="emailHelp"
+      name="fname"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Last Name</label>
+    <input
+      type="email"
+      class="form-control"
+      aria-describedby="emailHelp"
+      name="lname"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Age</label>
+    <input
+      type="email"
+      class="form-control"
+      aria-describedby="emailHelp"
+      name="age"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      aria-describedby="emailHelp"
+      name="email"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" />
+  </div>
+
+  <button type="submit" class="btn btn-secondary">Sign Up</button>
+</form>
 {% endblock %}
